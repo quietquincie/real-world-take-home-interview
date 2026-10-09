@@ -1,58 +1,58 @@
 
-let books;
+let movies;
 
-async function renderBooks(filter) {
-  const booksWrapper = document.querySelector(".books");
+async function renderMovies(filter) {
+  const moviesWrapper = document.querySelector(".movies");
 
-booksWrapper.classList += ' books__loading'
+moviesWrapper.classList += ' movies__loading'
 
-if (!books) {
-  books = await getBooks();
+if (!movies) {
+  movies = await getMovies();
 }
 
-booksWrapper.classList.remove('books__loading')
+moviesWrapper.classList.remove('movies__loading')
 
   if (filter === "LOW_TO_HIGH") {
-    books.sort(
+    movies.sort(
       (a, b) =>
         (a.salePrice || a.originalPrice) - (b.salePrice || b.originalPrice)
     );
   } else if (filter === "HIGH_TO_LOW") {
-    books.sort(
+    movies.sort(
       (a, b) =>
         (b.salePrice || b.originalPrice) - (a.salePrice || a.originalPrice)
     );
   } else if (filter === "RATING") {
-    books.sort((a, b) => b.rating - a.rating);
+    movies.sort((a, b) => b.rating - a.rating);
   }
 
-  const booksHTML = books
-    .map((book) => {
-      return `<div class="book">
-    <figure class="book__img--wrapper">
-      <img class="book__img" src="${book.url}" alt="">
+  const moviesHTML = movies
+    .map((movie) => {
+      return `<div class="movie">
+    <figure class="movie__img--wrapper">
+      <img class="movie__img" src="${movie.url}" alt="">
     </figure>
-    <div class="book__title">
-      ${book.title}
+    <div class="movie__title">
+      ${movie.title}
     </div>
-    <div class="book__ratings">
-      ${ratingsHTML(book.rating)}
+    <div class="movie__ratings">
+      ${ratingsHTML(movie.rating)}
     </div>
-    <div class="book__price">
-      ${priceHTML(book.originalPrice, book.salePrice)}
+    <div class="movie__price">
+      ${priceHTML(movie.originalPrice, movie.salePrice)}
     </div>
   </div>`;
     })
     .join("");
 
-  booksWrapper.innerHTML = booksHTML;
+  moviesWrapper.innerHTML = moviesHTML;
 }
 
 function priceHTML(originalPrice, salePrice) {
   if (!salePrice) {
     return `$${originalPrice.toFixed(2)}`;
   }
-  return `<span class="book__price--normal">$${originalPrice.toFixed(2)}</span>$${salePrice.toFixed(2)}`;
+  return `<span class="movie__price--normal">$${originalPrice.toFixed(2)}</span>$${salePrice.toFixed(2)}`;
 }
 
 function ratingsHTML(rating) {
@@ -66,15 +66,15 @@ function ratingsHTML(rating) {
   return ratingHTML;
 }
 
-function filterBooks(event) {
-  renderBooks(event.target.value);
+function filterMovies(event) {
+  renderMovies(event.target.value);
 }
 
 setTimeout(() => {
-  // renderBooks();
+  // renderMovies();
 });
 // FAKE DATA
-function getBooks() {
+function getMovies() {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve([

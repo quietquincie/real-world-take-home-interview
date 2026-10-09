@@ -37,8 +37,6 @@ a:hover {
   text-decoration: underline;
 }
 
-
-
 ul {
   display: flex;
 }
@@ -70,7 +68,7 @@ button:active {
 }
 
 .btn {
-  background-color: #7342d6;
+  background-color: #dddcdf;
   color: white;
   padding: 12px 24px;
   font-size: 20px;
@@ -78,8 +76,8 @@ button:active {
   border: none;
 }
 
-.purple {
-  color: #cbb7f1;
+.btn__menu--close {
+  color: #0a02f8;
 }
 
 .logo {
@@ -99,25 +97,25 @@ button:active {
 }
 
 .nav__link {
-  margin-left: 16px;
+  margin-left: 20px;
   text-decoration: none;
-  font-size: 20px;
-  color: #f5f4f7;
-  font-weight: bold;
-  padding: 8px;
+  font-size: 14px;
+  color: #fffffe;
+  padding: 20px;
 }
 
 .nav__link:hover {
   text-decoration: underline;
-}
-
-.nav__link--primary {
-  border: 2px solid #f3f2f7;
-  border-radius: 4px;
+  text-decoration-line: 20px; 
+  text-decoration-thickness: 4px; 
+  text-decoration-color: #f7f5f3
 }
 
 .nav__link--primary:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-line: 20px; 
+  text-decoration-thickness: 4px; 
+  text-decoration-color: #0417ed
 }
 
 .btn__menu {
@@ -130,7 +128,7 @@ button:active {
 
 .menu__backdrop {
   position: absolute;
-  background-color: #040000;
+  background-color: #000000;
   top: 0;
   left: 0;
   right: 0;
@@ -290,8 +288,8 @@ HIGHLIGHTS
 }
 
 .highlight__img {
-  border: 2px solid #7342d65d;
-  color: #08060d;
+  border: 2px solid #fbfafc5d;
+  color: #edecf1;
   width: 100px;
   height: 100px;
   display: flex;
@@ -319,21 +317,21 @@ FEATURES
   background-color: rgba(115, 66, 214, 0.1);
 }
 
-.books {
+.movies {
   display: flex;
   flex-wrap: wrap;
 }
 
-.book {
+.movie {
   width: 25%;
   padding: 24px;
-  /* Added after tutorial to push all the books images down */
+  /* Added after tutorial to push all the movies images down */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
 
-.book__img {
+.movie__img {
   max-height: 380px;
   transition: all 300ms ease;
   cursor: not-allowed;
@@ -342,36 +340,36 @@ FEATURES
   object-position: left;
 }
 
-.book__img--wrapper {
+.movie__img--wrapper {
   margin-bottom: 8px;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
 }
 
-.book:hover .book__img {
+.movie:hover .movie__img {
   transform: scale(1.03);
 }
 
-.book__title {
+.movie__title {
   font-size: 20px;
   margin-bottom: 8px;
 }
 
-.book__title:hover {
+.movie__title:hover {
   text-decoration: underline;
   cursor: not-allowed;
 }
 
-.book__ratings {
+.movie__ratings {
   margin-bottom: 8px;
-  color: #fabf2a;
+  color: #f9e52f;
 }
 
-.book__price--normal {
+.movie__price--normal {
   text-decoration: line-through;
   padding-right: 6px;
-  color: #bfbfbf;
+  color: #b6c4db;
 }
 
 /* 
@@ -414,6 +412,11 @@ footer {
 
 .footer__link {
   padding: 0 80px;
+  font-size: 30px;
+}
+
+.footer__copyright {
+  font-size: 14px;
 }
 
 /* 
@@ -424,25 +427,25 @@ BOOKS PAGE
 **
 */
 
-#books__body {
-  background-color: rgba(115, 66, 214, 0.1);
+#movies__body {
+  background-color: rgb(0, 0, 0);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-#books__main {
+#movies__main {
   flex: 1;
 }
 
-.books__header {
+.movies__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
 }
 
-.books__header--title {
+.movies__header--title {
   margin-bottom: 0;
 }
 
@@ -459,7 +462,7 @@ select {
   max-width: 200px;
 }
 
-.books__loading {
+.movies__loading {
   width: 100%;
   display: flex;
   align-items: center;
@@ -469,11 +472,11 @@ select {
   color: #7342d6;
 }
 
-.books__loading--spinner {
+.movies__loading--spinner {
   display: none !important;
 }
 
-.books__loading .books__loading--spinner {
+.movies__loading .movies__loading--spinner {
   display: block !important;
 }
 
@@ -509,7 +512,7 @@ select {
     font-size: 18px;
   }
 
-  .book {
+  .movie {
     width: 50%;
   }
 }
