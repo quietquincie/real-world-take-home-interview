@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: Cochin; sans-serif;
 }
 
 html {
@@ -49,13 +49,14 @@ li {
 
 h1 {
   font-size: 56px;
-  color: #7342d6;
+  color: #f5f3f8;
   margin-bottom: 24px;
   text-align: center;
 }
 
 h2 {
-  font-size: 32px;
+  color: white;
+  font-size: 40px;
   margin-bottom: 32px;
   text-align: center;
 }
@@ -78,17 +79,19 @@ button:active {
 }
 
 .purple {
-  color: #7342d6;
+  color: #cbb7f1;
 }
 
 .logo {
-  width: 160px;
+  width: 300px;
+  height: 300px;
+  padding: 60px 50px 30px 0px;
 }
 
 .nav__container {
   width: 100%;
   max-width: 1200px;
-  padding: 0 24px;
+  padding: 50px 50px 0 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -99,7 +102,7 @@ button:active {
   margin-left: 16px;
   text-decoration: none;
   font-size: 20px;
-  color: #7342d6;
+  color: #f5f4f7;
   font-weight: bold;
   padding: 8px;
 }
@@ -109,7 +112,7 @@ button:active {
 }
 
 .nav__link--primary {
-  border: 2px solid #7342d6;
+  border: 2px solid #f3f2f7;
   border-radius: 4px;
 }
 
@@ -127,7 +130,7 @@ button:active {
 
 .menu__backdrop {
   position: absolute;
-  background-color: #242424;
+  background-color: #040000;
   top: 0;
   left: 0;
   right: 0;
@@ -184,7 +187,7 @@ LANDING
 */
 
 #landing {
-  background-color: rgba(115, 66, 214, 0.1)
+  background-color: rgba(0, 0, 0, 0.1)
 }
 
 header {
@@ -208,7 +211,7 @@ header {
 }
 
 .header__img--wrapper {
-  padding: 20px;
+  padding: 50px;
 
   /* Added this after the tutorial to 
   show it over the wave on larger screens */
@@ -288,7 +291,7 @@ HIGHLIGHTS
 
 .highlight__img {
   border: 2px solid #7342d65d;
-  color: #7342d6;
+  color: #08060d;
   width: 100px;
   height: 100px;
   display: flex;
@@ -378,7 +381,7 @@ EXPLORE
 */
 
 #explore {
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(5, 2, 11, 0.1);
 }
 
 /* 
@@ -388,7 +391,7 @@ FOOTER
 */
 
 footer {
-  background-color: #242424;
+  background-color: #000000;
 }
 
 .footer__logo {
@@ -396,8 +399,8 @@ footer {
 }
 
 .footer__logo--img {
-  width: 160px;
-  filter: grayscale(1) invert(1);
+  width: 250px;
+  filter: grayscale(1);
 }
 
 .footer__link,
@@ -406,11 +409,11 @@ footer {
 }
 
 .footer__list {
-  margin: 20px 0 24px 0;
+  margin: 0px 0 70px;
 }
 
 .footer__link {
-  padding: 0 8px;
+  padding: 0 80px;
 }
 
 /* 
@@ -444,7 +447,7 @@ BOOKS PAGE
 }
 
 select {
-  background-color: #fff;
+  background-color: #020000;
   border-radius: 4px;
   border: 1px solid #dcdfe6;
   color: #606266;
