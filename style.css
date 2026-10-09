@@ -45,11 +45,14 @@ li {
   list-style-type: none;
 }
 
+.blue {
+  color: rgb(43, 4, 218);
+}
+
 h1 {
   font-size: 56px;
   color: #f5f3f8;
   margin-bottom: 24px;
-  text-align: center;
 }
 
 h2 {
@@ -57,6 +60,8 @@ h2 {
   font-size: 40px;
   margin-bottom: 32px;
   text-align: center;
+  margin-left: 100px;
+  padding: 20px;
 }
 
 button {
@@ -71,7 +76,7 @@ button:active {
   background-color: #dddcdf;
   color: white;
   padding: 12px 24px;
-  font-size: 20px;
+  font-size: 22px;
   border-radius: 4px;
   border: none;
 }
@@ -314,34 +319,37 @@ FEATURES
 
 #features {
   padding-top: 8vw;
-  background-color: rgba(115, 66, 214, 0.1);
+  background-color: rgba(212, 211, 212, 0.1);
 }
 
 .movies {
   display: flex;
   flex-wrap: wrap;
+  padding: 32px;
 }
 
 .movie {
   width: 25%;
-  padding: 24px;
+  padding: 32px;
   /* Added after tutorial to push all the movies images down */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
 }
 
 .movie__img {
-  max-height: 380px;
+  max-height: 300px;
   transition: all 300ms ease;
   cursor: not-allowed;
   /* Added after tutorial to maintain image aspect ratio */
   object-fit: contain;
-  object-position: left;
+  object-position: center;
+  text-align: center;
 }
 
 .movie__img--wrapper {
-  margin-bottom: 8px;
+  margin-bottom: 16px;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -351,9 +359,16 @@ FEATURES
   transform: scale(1.03);
 }
 
+.movies__header--title:hover {
+  text-decoration: underline;
+  color: red;
+}
+
 .movie__title {
   font-size: 20px;
   margin-bottom: 8px;
+  text-align: center;
+  color: white;
 }
 
 .movie__title:hover {
@@ -364,12 +379,23 @@ FEATURES
 .movie__ratings {
   margin-bottom: 8px;
   color: #f9e52f;
+  text-align: center;
 }
 
 .movie__price--normal {
   text-decoration: line-through;
   padding-right: 6px;
-  color: #b6c4db;
+  color: #9abaed;
+  text-align: center;
+  margin-left: 2px;
+  font-size: 14px;
+
+}
+
+.movie__price {
+  color: rgb(253, 252, 251);
+  font-size: 22px;
+  text-align: center;
 }
 
 /* 
