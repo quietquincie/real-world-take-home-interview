@@ -240,6 +240,7 @@ header {
 .no-cursor {
   cursor: not-allowed;
 }
+
 /* 
 
 HIGHLIGHTS 
@@ -335,7 +336,6 @@ FEATURES
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
 }
 
 .movie__img {
@@ -349,7 +349,7 @@ FEATURES
 }
 
 .movie__img--wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
@@ -361,7 +361,10 @@ FEATURES
 
 .movies__header--title:hover {
   text-decoration: underline;
+  text-decoration-line: 24px;
+  text-decoration-thickness: 15px;
   color: red;
+  
 }
 
 .movie__title {
@@ -437,7 +440,7 @@ footer {
 }
 
 .footer__link {
-  padding: 0 80px;
+  padding: 0 30px;
   font-size: 30px;
 }
 

@@ -25,7 +25,7 @@
           <li><a href="#" class="nav__link">Contact</a></li>
         </ul>
         <button class="btn__menu" onclick="openMenu()">
-         <i class="fa-notdog fa-solid fa-bars"></i>
+          <i class="fa-notdog fa-solid fa-bars"></i>
         </button>
         <div class="menu__backdrop" style="visibility: hidden;">
           <button class="btn__menu btn__menu--close" onclick="closeMenu()">
@@ -55,12 +55,13 @@
             <h2 class="section__title movies__header--title">
               All <span class="blue">Movies</span>
             </h2>
-            <select id="filter" onchange="filterMovies(event)">
-              <option value="" disabled selected>Sort</option>
-              <option value="LOW_TO_HIGH">Price, Low to High</option>
-              <option value="HIGH_TO_LOW">Price, High to Low</option>
-              <option value="RATING">Rating</option>
-            </select>
+                <select id="filter" onchange="filterMovies(event)">
+                  <option value="" disabled selected>Sort</option>
+                  <option value="LOW_TO_HIGH">Price, Low to High</option>
+                  <option value="HIGH_TO_LOW">Price, High to Low</option>
+                  <option value="RATING">Rating</option>
+                </select>
+            </div>
           </div>
           <div class="movies movies__loading">
             <i class="fas fa-spinner movies__loading--spinner"></i>
