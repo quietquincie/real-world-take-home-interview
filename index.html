@@ -10,7 +10,6 @@
   <!-- UPDATE: using css version of font awesome so no need for kit -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b6f51a36c5.js" crossorigin="anonymous"></script>
-  <script src="index.js"></script>
 </head>
 
 <body id="movies__body">
@@ -55,20 +54,25 @@
             <h2 class="section__title movies__header--title">
               All <span class="blue">Movies</span>
             </h2>
-                <select id="filter" onchange="filterMovies(event)">
-                  <option value="" disabled selected>Sort</option>
-                  <option value="LOW_TO_HIGH">Price, Low to High</option>
-                  <option value="HIGH_TO_LOW">Price, High to Low</option>
-                  <option value="RATING">Rating</option>
-                </select>
+              <form class="search-container" action="/search" method="GET">
+                <input type="text" 
+                class="search-movies" placeholder="Search for a movie...">
+                <button type="submit" class="search-button">Search</button>
+              </form>
+              <div class="movie-list">
+                <div class="movie">
+                  <div class="movie-card">
+                    <div class="movie-card__container">
+                      <h3>Movie Name</h4>
+                        <p><b>Year</b></p>
+                        <p><b>IMDB</b></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="movies movies__loading">
-            <i class="fas fa-spinner movies__loading--spinner"></i>
-
-          </div>
         </div>
-      </div>
     </section>
   </main>
 
@@ -91,5 +95,5 @@
     </div>
   </footer>
 </body>
-
+<script src="index.js"></script>
 </html>
