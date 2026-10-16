@@ -1,20 +1,35 @@
 // API 1: https://www.omdbapi.com/?apikey=be449a2a&s=cloud
 
-let movies;
+const movieCardTemplate = document.querySelector("[data-movie-template]");
+
+function createMovieCard(movie) {
+  return `<div class="movie-card">
+            <div class="movie-title">${movie.Title}</div>
+            <div class="movie-year">${movie.Year}</div>
+            <div class="movie-imdb">${movie.imdbID}</div>
+            <div class="movie-poster"><img src="${movie.Poster}" alt="${movie.Poster}"></div>
+          </div>`;
+} 
+
+async function loadMovieCards(event) {
+  try {
+    const response = await fetch(`https://www.omdbapi.com/?apikey=be449a2a&s=${event.target.value}`);
+    const data = await response.json();
+    const movies = data.Search;
+    const container = document.getElementById('movie-cards-container');
+    container.innerHTML = movies.map(movie => createMovieCard(movie)).join('');
+  } 
+  catch (error) {
+    console.error('Error loading movie cards:', error);
+  }
+}
+
+loadMovieCards();
+
 
 async function searchMovies(event) {
   const movies = await fetch (`https://www.omdbapi.com/?apikey=be449a2a&s=${event.target.value}`);
   const moviesData = await movies.json();
-  console.log(
-moviesData.map(
-(movie) => `<div class="movie-card">
-        <div class="movie-card__container">
-          <h3>Movie Name</h4>
-            <p><b>Year</b>1990</p>
-            <p><b>IMDB</b> <a href="https://website.website" target="_blank">View on IMDB</a></p>
-        </div>
-      </div>`
-    )
-  );
-  }
+  const card = movieCardTemplate.content.cloneNode(true);
+}
 

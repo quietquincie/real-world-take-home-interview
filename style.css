@@ -342,19 +342,39 @@ FEATURES
   background-color: rgba(212, 211, 212, 0.1);
 }
 
-.movies {
+.movies__main {
   display: flex;
   flex-wrap: wrap;
-  padding: 32px;
+  padding: 5px;
 }
 
-.movie {
-  width: 25%;
-  padding: 32px;
-  /* Added after tutorial to push all the movies images down */
+.movie-cards-container {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.movie-poster {
+  width: 150px;
+  height: 300px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-card {
+  width: 150px;
+  height: 300px;
+  background-color: #000000;
+  padding: 25px;
+  margin: 50px;
 }
 
 .movie__img {
@@ -367,6 +387,10 @@ FEATURES
   text-align: center;
 }
 
+.data-movie-template {
+  display: flex;
+  flex-direction: row;
+}
 .movie__img--wrapper {
   margin-bottom: 8px;
   border-radius: 4px;

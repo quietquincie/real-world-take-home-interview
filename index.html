@@ -54,25 +54,24 @@
             <h2 class="section__title movies__header--title">
               All <span class="blue">Movies</span>
             </h2>
-              <form class="search-container" action="/search" method="GET">
-                <input type="text" 
-                class="search-movies" placeholder="Search for a movie..." oninput="searchMovies(event)">
-                <button type="submit" class="search-button">Search</button>
-              </form>
-              <div class="movie-list">
-                <div class="movie">
-                  <div class="movie-card">
-                    <div class="movie-card__container">
-                      <h3>Movie Name</h4>
-                        <p><b>Year</b></p>
-                        <p><b>IMDB</b></p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <form class="search-container" action="/search" method="GET">
+              <input type="text" name="search" class="search-movies" placeholder="Search for a movie..."
+                oninput="loadMovieCards(event)">
+              <button type="submit" class="search-button">Search
+              </button>
+            </form>
+            <div class="movie-cards-container" id="movie-cards-container"></div>
+            <div class="movie-card">
+            <template class = "data-movie-template">
+              <div class="movie-title"></div>
+              <div class="movie-year"></div>
+              <div class="movie-imdb"></div>
+              <div class="movie-poster"></div>
+            </template>
             </div>
           </div>
         </div>
+      </div>
     </section>
   </main>
 
@@ -96,4 +95,5 @@
   </footer>
 </body>
 <script src="index.js"></script>
+
 </html>
