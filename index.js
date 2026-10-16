@@ -27,9 +27,3 @@ async function loadMovieCards(event) {
 loadMovieCards();
 
 
-async function searchMovies(event) {
-  const movies = await fetch (`https://www.omdbapi.com/?apikey=be449a2a&s=${event.target.value}`);
-  const moviesData = await movies.json();
-  const card = movieCardTemplate.content.cloneNode(true);
-}
-
