@@ -11,9 +11,10 @@ function createMovieCard(movie) {
           </div>`;
 } 
 
-async function loadMovieCards(event) {
+async function loadMovieCards() {
   try {
-    const response = await fetch(`https://www.omdbapi.com/?apikey=be449a2a&s=${event.target.value}`);
+    const searchValue = document.querySelector("input").value;
+    const response = await fetch(`https://www.omdbapi.com/?apikey=be449a2a&s=${encodeURIComponent(searchValue)}`);
     const data = await response.json();
     const movies = data.Search;
     const container = document.getElementById('movie-cards-container');
