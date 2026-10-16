@@ -113,7 +113,7 @@ button:active {
   text-decoration: underline;
   text-decoration-line: 20px; 
   text-decoration-thickness: 4px; 
-  text-decoration-color: #f7f5f3
+  text-decoration-color: #fb0101
 }
 
 .nav__link--primary:hover {
@@ -456,9 +456,25 @@ footer {
   margin: 0px 0 70px;
 }
 
-.footer__link {
+.footer__link,
+.footer__link--primary {
   padding: 0 30px;
   font-size: 30px;
+  color: white;
+}
+
+.footer__link:hover {
+  text-decoration: underline;
+  text-decoration-line: 20px; 
+  text-decoration-thickness: 6px; 
+  text-decoration-color: #fb0101
+}
+
+.footer__link--primary:hover {
+  text-decoration: underline;
+  text-decoration-line: 20px; 
+  text-decoration-thickness: 6px; 
+  text-decoration-color: #0d01fb
 }
 
 .footer__copyright {
