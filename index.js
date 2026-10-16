@@ -24,6 +24,3 @@ async function loadMovieCards(event) {
   }
 }
 
-loadMovieCards();
-
-
