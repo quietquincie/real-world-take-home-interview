@@ -11,6 +11,8 @@ function createMovieCard(movie) {
           </div>`;
 } 
 
+
+
 async function loadMovieCards() {
   try {
     const searchValue = document.querySelector("input").value;

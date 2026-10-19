@@ -55,8 +55,8 @@
               All <span class="blue">Movies</span>
             </h2>
             <form class="search-container" action="/search" method="GET">
-              <input type="text" name="search" class="search-movies" placeholder="Search for a movie...">
-              <button onclick="loadMovieCards()">Search</button>
+              <input type="search" name="input" class="search-movies" placeholder="Search for a movie..." required />
+              <button type="button" onclick="loadMovieCards()" class="search-button">Search</button>
             </form>
             <div class="movie-cards-container" id="movie-cards-container"></div>
             <div class="movie-card">
