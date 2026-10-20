@@ -4,7 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Cochin; sans-serif;
+  font-family:  Avenir, Cochin, sans-serif;
 }
 
 html {
@@ -57,7 +57,7 @@ h1 {
 
 h2 {
   color: white;
-  font-size: 40px;
+  font-size: 38px;
   margin-bottom: 32px;
   text-align: center;
   margin-left: 100px;
@@ -81,14 +81,10 @@ button:active {
   border: none;
 }
 
-.btn__menu--close {
-  color: #0a02f8;
-}
-
 .logo {
   width: 300px;
   height: 300px;
-  padding: 60px 50px 30px 0px;
+  padding: 70px 50px 0px 0px;
 }
 
 .nav__container {
@@ -104,7 +100,7 @@ button:active {
 .nav__link {
   margin-left: 20px;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 18px;
   color: #fffffe;
   padding: 20px;
 }
@@ -112,14 +108,14 @@ button:active {
 .nav__link:hover {
   text-decoration: underline;
   text-decoration-line: 20px; 
-  text-decoration-thickness: 4px; 
+  text-decoration-thickness: 8px; 
   text-decoration-color: #fb0101
 }
 
 .nav__link--primary:hover {
   text-decoration: underline;
   text-decoration-line: 20px; 
-  text-decoration-thickness: 4px; 
+  text-decoration-thickness: 8px; 
   text-decoration-color: #0417ed
 }
 
@@ -127,7 +123,7 @@ button:active {
   background-color: transparent;
   font-size: 40px;
   border: none;
-  color: #7342d6;
+  color: #1505f2;
   display: none;
 }
 
@@ -163,23 +159,35 @@ button:active {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto;
 }
 
 .menu__list {
-  padding: 32px 0;
+  padding: 20px 0;
 }
 
 .menu__link {
   color: white;
-  font-size: 40px;
+  font-size: 38px;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 10px; 
+  text-decoration-color: #ff0303
 }
 
 .btn__menu--close {
   position: absolute;
-  top: 10px;
-  right: 20px;
-  padding: 8px;
-  color: white;
+  top: 30px;
+  right: 30px;
+  padding: 40px;
+  color: rgb(29, 5, 247);
+  font-size: 12px;
+}
+
+.btn__menu--close i {
+  font-size: 60px;
 }
 
 
@@ -202,16 +210,10 @@ LANDING
   font-size: 14px;
   cursor: pointer;
   font-weight: bold;
-  
 }
 
 #filter option {
  color: white;
- 
-}
-
-header {
-  height: calc(100vh - 80px);
 }
 
 .header__container {
@@ -232,9 +234,6 @@ header {
 
 .header__img--wrapper {
   padding: 50px;
-
-  /* Added this after the tutorial to 
-  show it over the wave on larger screens */
   z-index: 50;
 }
 
@@ -342,15 +341,20 @@ FEATURES
   background-color: rgba(212, 211, 212, 0.1);
 }
 
-.movies__main {
+.movies__header {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.movie-cards-container {
+.section__title {
+  font-size: 50px;
+}
+
+#movie-cards-container {
   color: rgb(248, 244, 244);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
   text-align: center;
   display: flex;
@@ -366,7 +370,7 @@ FEATURES
   height: 300px;
   background-color: #000000;
   padding: 25px;
-  margin: 50px;
+  margin: 70px;
 }
 
 .movie-poster {
@@ -382,7 +386,6 @@ FEATURES
   max-height: 300px;
   transition: all 300ms ease;
   cursor: not-allowed;
-  /* Added after tutorial to maintain image aspect ratio */
   object-fit: contain;
   object-position: center;
   text-align: center;
@@ -400,48 +403,11 @@ FEATURES
   display: flex;
 }
 
-.movie:hover .movie__img {
-  transform: scale(1.03);
-}
-
 .movies__header--title:hover {
   text-decoration: underline;
   text-decoration-color: red;
-  text-underline-offset: 8px;
-  text-decoration-thickness: 8px;
-}
-
-.movie__title {
-  font-size: 20px;
-  margin-bottom: 8px;
-  text-align: center;
-  color: white;
-}
-
-.movie__title:hover {
-  text-decoration: underline;
-  cursor: not-allowed;
-}
-
-.movie__ratings {
-  margin-bottom: 8px;
-  color: #f9e52f;
-  text-align: center;
-}
-
-.movie__price--normal {
-  text-decoration: line-through;
-  padding-right: 6px;
-  color: #9abaed;
-  text-align: center;
-  margin-left: 2px;
-  font-size: 14px;
-}
-
-.movie__price {
-  color: rgb(253, 252, 251);
-  font-size: 22px;
-  text-align: center;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 12px;
 }
 
 /* 

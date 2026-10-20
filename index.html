@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movie Mania</title>
   <link rel="stylesheet" href="style.css">
-  <!-- UPDATE: using css version of font awesome so no need for kit -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/b6f51a36c5.js" crossorigin="anonymous"></script>
 </head>
@@ -24,11 +23,11 @@
           <li><a href="#" class="nav__link">Contact</a></li>
         </ul>
         <button class="btn__menu" onclick="openMenu()">
-          <i class="fa-notdog fa-solid fa-bars"></i>
+          <i class="fa-solid fa-bars-staggered"></i>
         </button>
         <div class="menu__backdrop" style="visibility: hidden;">
           <button class="btn__menu btn__menu--close" onclick="closeMenu()">
-            <i class="fas fa-times"></i>
+            <i class="fa-regular fa-circle-xmark"></i>
           </button>
           <ul class="menu__links">
             <li class="menu__list">
@@ -58,15 +57,18 @@
               <input type="search" name="input" class="search-movies" placeholder="Search for a movie..." required />
               <button type="button" onclick="loadMovieCards()" class="search-button">Search</button>
             </form>
-            <div class="movie-cards-container" id="movie-cards-container"></div>
-            <div class="movie-card">
-            <template class = "data-movie-template">
-              <div class="movie-title"></div>
-              <div class="movie-year"></div>
-              <div class="movie-imdb"></div>
-              <div class="movie-poster"></div>
-            </template>
             </div>
+            <div class="movie-cards-container" id="movie-cards-container">
+              <div class="movie-card">
+                <template class="data-movie-template">
+                  <div class="movie-title"></div>
+                  <div class="movie-year"></div>
+                  <div class="movie-imdb"></div>
+                  <div class="movie-poster"></div>
+                </template>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -93,5 +95,6 @@
   </footer>
 </body>
 <script src="index.js"></script>
+<script src="movies.js"</script>
 
 </html>

@@ -1,5 +1,13 @@
 // API 1: https://www.omdbapi.com/?apikey=be449a2a&s=cloud
 
+function openMenu() {
+  document.body.classList += " menu--open"
+}
+
+function closeMenu() {
+  document.body.classList.remove('menu--open')
+}
+
 const movieCardTemplate = document.querySelector("[data-movie-template]");
 
 function createMovieCard(movie) {
@@ -11,9 +19,8 @@ function createMovieCard(movie) {
           </div>`;
 } 
 
-
-
 async function loadMovieCards() {
+  await new Promise(resolve => setTimeout(resolve, 1000));
   try {
     const searchValue = document.querySelector("input").value;
     const response = await fetch(`https://www.omdbapi.com/?apikey=be449a2a&s=${encodeURIComponent(searchValue)}`);
