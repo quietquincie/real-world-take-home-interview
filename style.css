@@ -570,11 +570,11 @@ BOOKS PAGE
 .movies__loading {
   width: 100%;
   display: flex;
+  margin-top: -35%;
   align-items: center;
   justify-content: center;
-  padding-top: 60px;
-  font-size: 60px;
-  color: #7342d6;
+  font-size: 100px;
+  color: #2101f4;
 }
 
 .movies__loading--spinner {
