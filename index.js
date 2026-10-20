@@ -11,13 +11,10 @@ function closeMenu() {
 
 async function loadMovieCards() {
 const moviesWrapper = document.querySelector(".movies");
-
 moviesWrapper.classList += ' movies__loading'
-
 if (!movies) {
   movies = await loadMovieCards();
 }
-
 moviesWrapper.classList.remove('movies__loading')
 }
 
@@ -40,10 +37,10 @@ async function loadMovieCards() {
     const data = await response.json();
     const movies = data.Search;
     const container = document.getElementById('movie-cards-container');
-    container.innerHTML = movies.map(movie => createMovieCard(movie)).join('');
+    container.innerHTML = movies.Search.map(movie => createMovieCard(movie)).join('');
   } 
-  catch (error();
-  ) {
+  catch (error)
+  {
     console.error('Error loading movie cards:', error);
   }
 }
