@@ -57,6 +57,12 @@
               <input type="search" name="input" class="search-movies" placeholder="Search for a movie..." required />
               <button type="button" onclick="loadMovieCards()" class="search-button">Search</button>
             </form>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="NEW_TO_OLD">Newest First</option>
+              <option value="OLD_TO_NEW">Oldest First</option>
+              <option value="ELPHABATIZE">Alphabetize</option>
+            </select>
             </div>
             <div class="movie-cards-container" id="movie-cards-container">
               <div class="movie-card">

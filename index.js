@@ -14,15 +14,19 @@ const movieCardTemplate = document.querySelector("[data-movie-template]");
 function createMovieCard(movie) {
   return `<div class="movie-card">
     <div class="movie-title">${movie.Title}</div>
-    <div class="movie-year">${movie.Year}</div>
-    <div class="movie-imdb">${movie.imdbID}</div>
+    <div class="movie-year">Released: ${movie.Year}</div>
+    <div class="movie-imdb">IMDB: ${movie.imdbID}</div>
     <div class="movie-poster"><img src="${movie.Poster}" alt="${movie.Poster}"></div>
   </div>`;
 }
 
 const moviesWrapper = document.querySelector(".movies");
 
-async function loadMovieCards() {
+if (filter === 'OLD_TO_NEW') {
+  movies.sort((a, b) => a.Year - b.Year);
+}
+
+async function loadMovieCards(filter) {
   moviesWrapper.classList.add("movies__loading");
   await new Promise((resolve) => setTimeout(resolve, 500));
   try {
@@ -42,4 +46,8 @@ async function loadMovieCards() {
   } finally {
     moviesWrapper.classList.remove("movies__loading");
   }
+}
+
+function filterMovies(event) {
+     loadMovieCards(event.target.value);
 }

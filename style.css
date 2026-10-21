@@ -81,10 +81,16 @@ button:active {
   border: none;
 }
 
+/*
+
+NAVIGATION
+
+*/
+
 .logo {
-  width: 300px;
-  height: 300px;
-  padding: 70px 50px 0px 0px;
+  width: 320px;
+  height: 280px;
+  margin-top: 88px;
 }
 
 .nav__container {
@@ -203,10 +209,10 @@ LANDING
 
 #filter {
   background-color: #0425c8;
-  color: white;
+  color: rgb(253, 254, 254);
   border: 2px solid #0425c8;
   border-radius: 20px;
-  padding: 5px 30px;
+  padding: 40px 30px 30px 30px;
   font-size: 14px;
   cursor: pointer;
   font-weight: bold;
@@ -256,8 +262,6 @@ LANDING
 .no-cursor {
   cursor: not-allowed;
 }
-
-
 
 /* 
 
@@ -346,10 +350,12 @@ FEATURES
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 32px;
 }
 
 .section__title {
   font-size: 50px;
+  align-items: center;
 }
 
 #movie-cards-container {
@@ -366,16 +372,16 @@ FEATURES
 }
 
 .movie-card {
-  width: 150px;
-  height: 300px;
+  width: 200px;
+  height: auto;
   background-color: #000000;
   padding: 25px;
-  margin: 70px;
+  margin: 20px;
 }
 
 .movie-poster {
-  width: 150px;
-  height: 300px;
+  width: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -394,6 +400,12 @@ FEATURES
 .data-movie-template {
   display: flex;
   flex-direction: row;
+}
+
+.movie-title {
+  font-size: 18px;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .movie__img--wrapper {
@@ -436,6 +448,7 @@ footer {
 
 .footer__logo--img {
   width: 250px;
+  height: 230px;
   filter: grayscale(1);
 }
 
@@ -476,7 +489,7 @@ footer {
 /* 
 **
 
-BOOKS PAGE
+MOVIES PAGE
 
 **
 */
@@ -496,34 +509,37 @@ BOOKS PAGE
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
+  padding: -5px;
 }
 
 .movies__header--title {
-  margin-bottom: 30px;
+  letter-spacing: -2px;
+  justify-content: space-between;
+  font-size: 48px;
+  white-space: nowrap;
 }
 
 .search-container {
   display: flex;
   align-items: center;
   margin-bottom: 24px;
-  padding: 24px 24px;
-  border-radius: 4px;
+  padding: auto;
+  border-radius: 16px;
+  left: -16px;
 }
 
 .search-button {
-  width: 100px;
-  height: 50px;
-  position: relative;
-  left: 20px;
-  top: 3px;
-  border-radius: 16px;
-  border: 1px solid #f0f2f6;
-  background-color: #000000;
-  font-weight: 600;
+  width: 150px;
+  height: 70px;
+  margin-left: 20px;
+  margin-right: 30px;
+  border-radius: 40px;
+  border: none;
+  background-color: #2902b4;
+  font-weight: 1000;
   color: white;
-  font-size: 20px;
-  padding: 8px 16px;
+  font-size: 30px;
+  padding: 10px;
 }
 
 .search-movies {
@@ -542,6 +558,17 @@ BOOKS PAGE
   border: 1px solid #dcdfe6;
   outline: none;
   box-sizing: border-box;
+  padding: 20px;
+}
+
+#filter {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color:rgb(0, 0, 0);
+  width: 80px;
+  height: 44px;
+  border-radius: 30px;
+  margin-right: 72px;
 }
 
 #results-list {
@@ -570,7 +597,7 @@ BOOKS PAGE
 .movies__loading {
   width: 100%;
   display: flex;
-  margin-top: -35%;
+  margin-top: auto;
   align-items: center;
   justify-content: center;
   font-size: 100px;
