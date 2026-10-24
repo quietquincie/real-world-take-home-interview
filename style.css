@@ -212,7 +212,6 @@ LANDING
   color: rgb(253, 254, 254);
   border: 2px solid #0425c8;
   border-radius: 20px;
-  padding: 40px 30px 30px 30px;
   font-size: 14px;
   cursor: pointer;
   font-weight: bold;
@@ -224,18 +223,18 @@ LANDING
 
 .header__container {
   width: 100%;
-  max-width: 720px;
   margin: 0 auto;
   height: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
 }
 
 .header__description {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  
 }
 
 .header__img--wrapper {
@@ -350,7 +349,7 @@ FEATURES
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 32px;
+  margin-top: 30px;
 }
 
 .section__title {
@@ -405,7 +404,6 @@ FEATURES
 .movie-title {
   font-size: 18px;
   text-align: center;
-  flex-wrap: wrap;
 }
 
 .movie__img--wrapper {
@@ -510,29 +508,33 @@ MOVIES PAGE
   justify-content: space-between;
   align-items: center;
   padding: -5px;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .movies__header--title {
   letter-spacing: -2px;
   justify-content: space-between;
-  font-size: 48px;
+  align-items: center;
+  font-size: 52px;
   white-space: nowrap;
+  margin-bottom: -12px;
+  flex-direction: row;
 }
 
 .search-container {
   display: flex;
   align-items: center;
-  margin-bottom: 24px;
+  margin-top: 16px;
   padding: auto;
   border-radius: 16px;
-  left: -16px;
+  flex-direction: row;
 }
 
 .search-button {
   width: 150px;
   height: 70px;
   margin-left: 20px;
-  margin-right: 30px;
   border-radius: 40px;
   border: none;
   background-color: #2902b4;
@@ -563,7 +565,6 @@ MOVIES PAGE
 
 #filter {
   padding: 10px;
-  margin-bottom: 20px;
   background-color:rgb(0, 0, 0);
   width: 80px;
   height: 44px;
@@ -626,22 +627,49 @@ MOVIES PAGE
   }
 }
 
+@media (max-width: 996px) {
+  #filter { 
+    margin-left: 132px;
+
+    .movies__header {
+      margin-left: 72px;
+    }
+  }
+}
+
+@media (max-width: 843px) {
+  .movies__header {
+    margin-left: 72px;
+}
+    .search-container {
+      margin-left: 72px;
+    }
+
+  #filter {
+     position: relative;
+     top: -150px;
+     left: 280px;
+  }
+}
+ 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
-  .header__description {
-    padding: 0 24px;
+
+  .movies__header--title {
+    font-size: 60px;
+    margin-left: 50px;
   }
 
-  h1 {
-    font-size: 40px;
-  }
+  .search-button {
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+  };
 
-  h2 {
-    font-size: 26px;
-  }
-
-  button {
-    font-size: 18px;
+  #filter {
+    position: absolute;
+    top: 24px;
+    left: 240px;
   }
 
   .movie {

@@ -22,11 +22,9 @@ function createMovieCard(movie) {
 
 const moviesWrapper = document.querySelector(".movies");
 
-if (filter === 'OLD_TO_NEW') {
-  movies.sort((a, b) => a.Year - b.Year);
-}
-
-async function loadMovieCards(filter) {
+async function loadMovieCards(
+  filter = document.querySelector("#filter").value
+) {
   moviesWrapper.classList.add("movies__loading");
   await new Promise((resolve) => setTimeout(resolve, 500));
   try {
@@ -35,7 +33,14 @@ async function loadMovieCards(filter) {
       `https://www.omdbapi.com/?apikey=be449a2a&s=${encodeURIComponent(searchValue)}`,
     );
     const data = await response.json();
-    const movies = data.Search;
+    const movies = data.Search || [];
+    if (filter === "OLD_TO_NEW") {
+      movies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
+    } else if (filter === "NEW_TO_OLD") {
+      movies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year)); 
+    } else if (filter === "ELPHABATIZE") {
+      movies.sort((a, b) => a.Title.localeCompare(b.Title)); 
+    } 
     const container = document.getElementById("movie-cards-container");
     container.innerHTML =
       (movies ||[])
