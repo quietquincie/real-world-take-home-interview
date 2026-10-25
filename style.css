@@ -566,7 +566,7 @@ MOVIES PAGE
 #filter {
   padding: 10px;
   background-color:rgb(0, 0, 0);
-  width: 80px;
+  width: 128px;
   height: 44px;
   border-radius: 30px;
   margin-right: 72px;
@@ -641,23 +641,21 @@ MOVIES PAGE
   .movies__header {
     margin-left: 72px;
 }
+
+.movies__header--title {
+    font-size: 60px;
+    margin-left: 50px;
+  }
+
     .search-container {
       margin-left: 72px;
     }
 
   #filter {
-     position: relative;
-     top: -150px;
-     left: 280px;
+    position: absolute;
+    top: 24px;
+    left: 240px;
   }
-}
- 
-/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
-@media (max-width: 768px) {
-
-  .movies__header--title {
-    font-size: 60px;
-    margin-left: 50px;
   }
 
   .search-button {
@@ -665,12 +663,11 @@ MOVIES PAGE
     height: 50px;
     width: 100px;
   };
+}
+ 
+/* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
+@media (max-width: 768px) {
 
-  #filter {
-    position: absolute;
-    top: 24px;
-    left: 240px;
-  }
 
   .movie {
     width: 50%;
