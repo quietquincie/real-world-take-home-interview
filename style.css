@@ -632,7 +632,7 @@ MOVIES PAGE
       align-items: center;  
       gap: 20px;
   }
-  
+
  #filter { 
     position: static;
     margin: 0;
@@ -640,12 +640,8 @@ MOVIES PAGE
 
 .movies__header--title {
     font-size: 60px;
-    margin-left: 50px;
+    margin: -20px;
   }
-
-    .search-container {
-      margin-left: 72px;
-    }
 
  #filter { 
     position: static;
