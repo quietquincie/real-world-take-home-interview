@@ -458,6 +458,7 @@ footer {
 
 .footer__list {
   margin: 0px 0 70px;
+  text-align: center;
 }
 
 .footer__link,
@@ -465,6 +466,7 @@ footer {
   padding: 0 30px;
   font-size: 30px;
   color: white;
+  text-align: center;
 }
 
 .footer__link:hover {
