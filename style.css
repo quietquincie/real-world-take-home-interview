@@ -647,15 +647,18 @@ letter-spacing: -2px;
   .movies__header--title, 
   .movies__header--title .blue {
     margin-bottom: -48px;
-    margin-left: 8px;
   }
 
   .movies__header--title {
     font-size: 60px;
   }
 
+  .search-container {
+    margin-left: 32px;
+  }
+
   .movies__header--title .blue {
-font-size: 64px;
+  font-size: 64px;
   }
 
   #filter {
