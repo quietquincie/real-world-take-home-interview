@@ -23,7 +23,7 @@ function createMovieCard(movie) {
 const moviesWrapper = document.querySelector(".movies");
 
 async function loadMovieCards(
-  filter = document.querySelector("#filter").value
+  filter = document.querySelector("#filter").value,
 ) {
   moviesWrapper.classList.add("movies__loading");
   await new Promise((resolve) => setTimeout(resolve, 500));
@@ -37,15 +37,14 @@ async function loadMovieCards(
     if (filter === "OLD_TO_NEW") {
       movies.sort((a, b) => parseInt(a.Year) - parseInt(b.Year));
     } else if (filter === "NEW_TO_OLD") {
-      movies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year)); 
+      movies.sort((a, b) => parseInt(b.Year) - parseInt(a.Year));
     } else if (filter === "ELPHABATIZE") {
-      movies.sort((a, b) => a.Title.localeCompare(b.Title)); 
-    } 
+      movies.sort((a, b) => a.Title.localeCompare(b.Title));
+    }
     const container = document.getElementById("movie-cards-container");
-    container.innerHTML =
-      (movies ||[])
-        .map((movie) => createMovieCard(movie))
-        .join("");
+    container.innerHTML = (movies || [])
+      .map((movie) => createMovieCard(movie))
+      .join("");
   } catch (error) {
     console.error("Error loading movie cards:", error);
   } finally {
@@ -54,5 +53,5 @@ async function loadMovieCards(
 }
 
 function filterMovies(event) {
-     loadMovieCards(event.target.value);
+  loadMovieCards(event.target.value);
 }
