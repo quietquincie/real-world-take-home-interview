@@ -87,8 +87,8 @@ NAVIGATION
 .logo {
   width: 320px;
   height: 280px;
-  margin-top: 96px;
-  margin-left: -40px;
+  margin-top: 84px;
+  margin-left: -24px;
   flex-shrink: 0;
 }
 
@@ -409,8 +409,8 @@ FEATURES
 .movies__header--title:hover {
   text-decoration: underline;
   text-decoration-color: red;
-  text-underline-offset: 10px;
-  text-decoration-thickness: 12px;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 14px;
 }
 
 /* 
@@ -464,14 +464,14 @@ footer {
 .footer__link:hover {
   text-decoration: underline;
   text-decoration-line: 20px;
-  text-decoration-thickness: 6px;
+  text-decoration-thickness: 10px;
   text-decoration-color: #fb0101;
 }
 
 .footer__link--primary:hover {
   text-decoration: underline;
   text-decoration-line: 20px;
-  text-decoration-thickness: 6px;
+  text-decoration-thickness: 10px;
   text-decoration-color: #0d01fb;
 }
 
